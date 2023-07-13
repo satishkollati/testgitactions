@@ -17,8 +17,4 @@ phases:
       - docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/tomcat:latest
 
    
-    commands:
-      - printf '[{"name":"webapp","imageUri":"%s"}]' $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/tomcat:latest > imagedefinitions.json
-
-artifacts:
-  files: imagedefinitions.json   
+  

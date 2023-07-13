@@ -4,4 +4,4 @@ COPY . .
 RUN mvn package
 
 FROM tomcat
-COPY --from=build /app/target/WenApp.war /usr/local/tomcat/webapps
+COPY --from=build /app/target/WebApp.war /usr/local/tomcat/webapps

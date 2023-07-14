@@ -22,6 +22,8 @@ phases:
 
 
 artifacts:
-  files: imagedefinitions.json
+  files:
+    - target/WebApp.war
+    - imagedefinitions.json
 
   

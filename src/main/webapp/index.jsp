@@ -51,7 +51,7 @@
 <div class="jumbotron">
     <div class="container">
         <h1>Hello world </h1>
-        <p>This is satish</p>
+        <p>This is satish.</p>
         <p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
     </div>
 </div>

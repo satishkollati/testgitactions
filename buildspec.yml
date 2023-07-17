@@ -10,8 +10,8 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...          
-      - docker build -t tomcat:latest .
-      - docker tag tomcat:latest $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/webapp:latest
+      - docker build -t webapp:latest .
+      - docker tag webapp:latest $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/webapp:latest
   post_build:
     commands:
       - echo Build completed on `date`

@@ -1,0 +1,33 @@
+name: test github actions
+on: [push,workflow_dispatch]
+jobs: 
+  test:
+     runs-on: ubuntu-latest 
+     steps:
+      - name: get the code
+        uses: actions/checkout@v3
+      - name: Set up JDK 14
+        uses: actions/setup-java@v1
+        with:
+          java-version: '14'
+  build_the_code:
+     needs: test
+     runs-on: ubuntu-latest 
+     steps:
+      - name: get the code
+        uses: actions/checkout@v3
+      - name: Set up JDK 14
+        uses: actions/setup-java@v1
+        with:
+          java-version: '14'
+      - name: Build with Maven
+        run: mvn -B package --file pom.xml
+      - name : create directory
+        run: mkdir staging && cp target/*.war staging
+      - name: upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+           name: Package
+           path: staging
+        
+

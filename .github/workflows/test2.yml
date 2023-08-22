@@ -15,7 +15,7 @@ jobs:
       - name : create directory
         run: mkdir staging && cp target/*.war staging
       - name: upload artifacts
-         uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v3
           with:
            name: Package
            path: staging

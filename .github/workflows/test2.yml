@@ -11,7 +11,7 @@ jobs:
         with:
           java-version: '14'
   build_the_code:
-     needs: test
+     needs: clone_and_test_code
      runs-on: ubuntu-latest 
      steps:
       - name: get the code
